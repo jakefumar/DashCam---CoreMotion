@@ -25,11 +25,11 @@ class ViewController: UIViewController {
         
         myAccelerometer()
     }
-
+    
     
     func myAccelerometer(){
         
-        motion.accelerometerUpdateInterval = 0.5
+        motion.accelerometerUpdateInterval = 0.25
         motion.startAccelerometerUpdates(to: OperationQueue.current!) { (data, error) in
             print(data as Any)
             if let trueData = data {
@@ -38,13 +38,13 @@ class ViewController: UIViewController {
                 let y = trueData.acceleration.y
                 let z = trueData.acceleration.z
                 
-                self.xAcceleration.text = "x-coord: \(Double(x).rounded(toPlaces: 3))"
-                self.yAcceleration.text = "y-coord: \(Double(y).rounded(toPlaces: 3))"
-                self.zAcceleration.text = "z-coord: \(Double(z).rounded(toPlaces: 3))"
+                self.xAcceleration.text = "x: \(Float(x))"
+                self.yAcceleration.text = "y: \(Float(y))"
+                self.zAcceleration.text = "z: \(Float(x))"
             }
         }
     }
-
+    
 }
 
 
