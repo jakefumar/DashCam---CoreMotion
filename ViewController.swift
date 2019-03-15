@@ -4,7 +4,7 @@
 //
 //  Created by Jake Fumar & Dennis Lin on 2/12/19.
 //  Copyright © 2019 Jake Fumar. All rights reserved.
-//
+// added reference in Github Comments
 
 import UIKit
 import CoreMotion
